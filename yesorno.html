@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta charset="UTF8">
+	<title>YES or NO?</title>
+	<script>
+	function decider(){
+		var x = Math.floor((Math.random() * 100) + 1);
+		if (x % 2 == 0){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function helper(){
+		var answer = decider();
+		var result = document.getElementById("result");
+		if(answer){
+			result.innerHTML = "YES!";
+		} else {
+			result.innerHTML = "NO!";
+		}
+	}
+	</script>
+</head>
+<body style="background-color: rgb(77, 89, 102);">
+<div style="text-align: center;">
+	<div id="header" style="width:85%; margin-left:auto; margin-right:auto; background-color:rgb(255, 255, 240); border: 2px solid black;">
+		<font size="6"><b>YES</b> or <b>NO</b></font>
+		<div>Tool to help you decide!</div>
+	</div>
+	<br>
+	<div id="content" style="width:85%; margin-left:auto; margin-right:auto; background-color:rgb(255, 255, 240); border: 2px solid black;">
+		<br>
+		<div id="result" style="width:85%; margin-left:auto; margin-right:auto; border: 2px solid black;">Your answer will spawn here.</div>
+		<br>
+		<button type="button" onclick="helper()">Get answer!</button>
+	</div>
+	<br>
+	<div id="footer" style="width:85%; margin-left:auto; margin-right:auto; background-color:rgb(255, 255, 240); border: 2px solid black;">
+	<font size="2">Tool created by Leonardo Tomé</font>
+	</div>
+</div>
+</body>
+</html>
